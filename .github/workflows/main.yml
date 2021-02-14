@@ -24,7 +24,7 @@ on:
     #         │ │ │ │ │
     #         │ │ │ │ │
     #         * * * * *
-    - cron:  '0 */1 * * *'
+    - cron:  '0 */12 * * *'
 
 jobs:
   merge:
@@ -52,7 +52,7 @@ jobs:
           git fetch upstream
 
           # Merge changes
-          git checkout master
+          git switch master
           git merge --no-edit upstream/master
           git push origin master
         # Change the below to your settings
